@@ -25,7 +25,7 @@ As a general rule of thumb:
 * All python files are installed by copying to the Rhino script folder. ie.: C:\Users\"USER"\AppData\Roaming\McNeel\Rhinoceros\5.0\scripts
 
 Options to use the function:
-* Recommended: Import the bundled "Block Tools.rui" toolbar with readymade buttons to call the functions.
+* Recommended: Import the bundled "Block Tools.rui" toolbar with readymade buttons to call the functions (found in the ui folder).
 * Add a new button with the following macro: ( _NoEcho !-_RunPythonScript "MakeUnique.py" _Echo )
 * Add an alias with the above command
 * Call the script directly by using this command: "-RunPythonScript MakeUnique.py"
