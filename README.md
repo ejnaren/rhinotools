@@ -17,7 +17,7 @@ Inspired by the ResetBlock script by Dale Fugier. Thank you.
 Takes one or many blocks and creates a unique copy with own block definitions.
 
 ### SelectSameBlocks:
-Selects alle the blocks with the same definition as the selected blocks.
+Selects all the blocks with the same definition as the selected blocks.
 
 ## Installation:
 With each file comes installation instructions.
