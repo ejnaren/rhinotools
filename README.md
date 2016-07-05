@@ -1,24 +1,24 @@
 # RhinoTools
-## Custom tools for Rhino
+Custom tools for Rhino
 
-### Description:
+## Description:
 These tools are created to enhance the working with Rhino.
 
-### Current Tools:
+## Current Tools:
 
-## Block Tools:
 
-## ResetBlockScale:
+
+### ResetBlockScale:
 Resets the scale of a block, keeping the rotation around the insertion point.
 Inspired by the ResetBlock script by Dale Fugier. Thank you.
 
-## MakeUnique:
+### MakeUnique:
 Takes one or many blocks and creates a unique copy with own block definitions.
 
-## SelectSameBlocks:
+### SelectSameBlocks:
 Selects alle the blocks with the same definition as the selected blocks.
 
-### Installation:
+## Installation:
 With each file comes installation instructions.
 As a general rule of thumb:
 * All python files are installed by copying to the Rhino script folder. ie.: C:\Users\"USER"\AppData\Roaming\McNeel\Rhinoceros\5.0\scripts
