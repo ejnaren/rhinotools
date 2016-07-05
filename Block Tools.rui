@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RhinoUI major_ver="2" minor_ver="0" guid="34428528-75b9-4501-9f1f-0cbf6274c7ff" localize="False" default_language_id="1033">
+  <extend_rhino_menus />
+  <menus />
+  <tool_bar_groups>
+    <tool_bar_group guid="3274aed6-dd6e-4509-a05f-61e25cd3c5c1" dock_bar_guid32="00000000-0000-0000-0000-000000000000" dock_bar_guid64="e0633077-bc3b-4b52-9c51-51fddee5fcea" active_tool_bar_group="aa75bbdf-3691-4c20-ab47-4e950388b294" single_file="False" hide_single_tab="True" point_floating="-2147483648,0">
+      <text>
+        <locale_1033>BlockTools</locale_1033>
+      </text>
+      <tool_bar_group_item guid="aa75bbdf-3691-4c20-ab47-4e950388b294" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>BlockTools</locale_1033>
+        </text>
+        <tool_bar_id>db65714a-6dd6-48d7-ad21-e1b88a3b0644</tool_bar_id>
+      </tool_bar_group_item>
+      <dock_bar_info dock_bar="False" docking="True" horz="False" visible="True" floating="True" mru_float_style="4096" bar_id="59497" mru_width="32767" point_pos="-2,-2" float_point="-2147483648,0" rect_mru_dock_pos="0,0,0,0" dock_location_u="0" dock_location="left" float_size="301,58" />
+    </tool_bar_group>
+  </tool_bar_groups>
+  <tool_bars>
+    <tool_bar guid="db65714a-6dd6-48d7-ad21-e1b88a3b0644" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="11f3ae97-9a57-4212-ba66-ff2c9a134b23" item_display_style="text_only">
+      <text>
+        <locale_1033>Block Tools</locale_1033>
+      </text>
+      <tool_bar_item guid="ef94d56a-21fa-4724-a07a-f64b2c7a25dc" button_display_mode="text_only" display_style_from_parent="False" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>fd99039d-1416-467a-9fef-7951835c274f</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="9d50e593-327f-43a8-b68d-c7a3e07ef185" button_display_mode="text_only" display_style_from_parent="False" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>4e5d1436-4233-46a4-9706-29c5446abe05</left_macro_id>
+        <right_macro_id>8a009184-094e-4566-b3de-17261d51916d</right_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="b78481c6-8948-4c07-86a7-fd6a80fd771c" button_display_mode="text_only" display_style_from_parent="False" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>f51953e1-b3e5-4b12-8c86-5ccc2efd815b</left_macro_id>
+        <right_macro_id>a979c847-bb0d-449b-9349-3dfd6bf3ff9e</right_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+  </tool_bars>
+  <macros>
+    <macro_item guid="fd99039d-1416-467a-9fef-7951835c274f" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="9478b3dd-8814-44ac-9689-7508002e51bf" bitmap_id="72d419e3-d0c2-43f0-987c-ee05aad84448">
+      <text>
+        <locale_1033>Macro 06</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Reset the scale of a block</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>ResetBlockScale</locale_1033>
+      </button_text>
+      <script>_NoEcho
+-_RunPythonScript "ResetBlockScale.py"
+_Echo</script>
+    </macro_item>
+    <macro_item guid="4e5d1436-4233-46a4-9706-29c5446abe05" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="1075352d-4730-4326-bbfc-ba8ddcb568b7" bitmap_id="27dda0a2-b220-41ad-b7b6-07db59fb63d7">
+      <text>
+        <locale_1033>Macro 07</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Makes selected blocks have their own block definition</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>MakeUnique</locale_1033>
+      </button_text>
+      <script>_NoEcho
+-_RunPythonScript "MakeUnique.py"
+_Echo</script>
+    </macro_item>
+    <macro_item guid="8a009184-094e-4566-b3de-17261d51916d" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="d1350f73-fe29-49bb-94d2-3819e620395d" bitmap_id="293bab39-6aae-4f20-8a6c-777ee6cb4a33">
+      <text>
+        <locale_1033>Macro 08</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Try your luck...</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>MakeUnique</locale_1033>
+      </button_text>
+    </macro_item>
+    <macro_item guid="f51953e1-b3e5-4b12-8c86-5ccc2efd815b" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="89801a40-20b7-4573-badd-700adf9b7408" bitmap_id="d256c0b4-dd57-47ff-b7dd-e2c1c74f45b8">
+      <text>
+        <locale_1033>Macro 09</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Selects all blocks that are the same as the selected blocks</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>SelSameBlock</locale_1033>
+      </button_text>
+      <script>! -_RunPythonScript "SelectSameBlocks.py"
+</script>
+    </macro_item>
+    <macro_item guid="a979c847-bb0d-449b-9349-3dfd6bf3ff9e" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="5a1e6bae-76da-4c15-9715-1c8b15d61955" bitmap_id="692b2c2e-729c-4dfe-a6c6-859c8c9251e1">
+      <text>
+        <locale_1033>Macro 08 - Copy</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Try your luck...</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>SelSameBlock</locale_1033>
+      </button_text>
+    </macro_item>
+  </macros>
+  <bitmaps>
+    <small_bitmap item_width="16" item_height="16">
+      <bitmap_item guid="72d419e3-d0c2-43f0-987c-ee05aad84448" index="0" />
+      <bitmap_item guid="27dda0a2-b220-41ad-b7b6-07db59fb63d7" index="1" />
+      <bitmap_item guid="293bab39-6aae-4f20-8a6c-777ee6cb4a33" index="2" />
+      <bitmap_item guid="d256c0b4-dd57-47ff-b7dd-e2c1c74f45b8" index="3" />
+      <bitmap_item guid="692b2c2e-729c-4dfe-a6c6-859c8c9251e1" index="4" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAABAAAABQCAYAAAAQq/UNAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAcSURBVFhH7cGBAAAAAMOg+VNf4QBVAAAAAACX
+GhRQAAHn9VY5AAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </small_bitmap>
+    <normal_bitmap item_width="24" item_height="24">
+      <bitmap_item guid="72d419e3-d0c2-43f0-987c-ee05aad84448" index="0" />
+      <bitmap_item guid="27dda0a2-b220-41ad-b7b6-07db59fb63d7" index="1" />
+      <bitmap_item guid="293bab39-6aae-4f20-8a6c-777ee6cb4a33" index="2" />
+      <bitmap_item guid="d256c0b4-dd57-47ff-b7dd-e2c1c74f45b8" index="3" />
+      <bitmap_item guid="692b2c2e-729c-4dfe-a6c6-859c8c9251e1" index="4" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAABgAAAB4CAYAAADogzKiAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAiSURBVGhD7cGBAAAAAMOg+VPf4ARVAAAAAAAA
+AAAAAAAcNS14AAH/Szg0AAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </normal_bitmap>
+    <large_bitmap item_width="32" item_height="32">
+      <bitmap_item guid="72d419e3-d0c2-43f0-987c-ee05aad84448" index="0" />
+      <bitmap_item guid="27dda0a2-b220-41ad-b7b6-07db59fb63d7" index="1" />
+      <bitmap_item guid="293bab39-6aae-4f20-8a6c-777ee6cb4a33" index="2" />
+      <bitmap_item guid="d256c0b4-dd57-47ff-b7dd-e2c1c74f45b8" index="3" />
+      <bitmap_item guid="692b2c2e-729c-4dfe-a6c6-859c8c9251e1" index="4" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAACAAAACgCAYAAABtym4sAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVHhe7cEBAQAAAIIg/69uSEAAAAAAAAAA
+AAAAAAAAAAAAAAAAwLkaUKAAAd99Ae8AAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </large_bitmap>
+  </bitmaps>
+  <scripts />
+</RhinoUI>
