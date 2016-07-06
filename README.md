@@ -1,23 +1,19 @@
-# RhinoTools
-Custom tools for Rhino
+#RhinoTools:
 
 ## Description:
 These tools are created to enhance the working with Rhino.
 For examples and more info a blog post is coming soon.
 
+
 ## Current Tools:
-
-
-
-### ResetBlockScale:
+#### ResetBlockScale:
 Resets the scale of a block, keeping the rotation around the insertion point.
 Inspired by the ResetBlock script by Dale Fugier. Thank you.
-
-### MakeUnique:
+#### MakeUnique:
 Takes one or many blocks and creates a unique copy with own block definitions.
-
-### SelectSameBlocks:
+#### SelectSameBlocks:
 Selects all the blocks with the same definition as the selected blocks.
+
 
 ## Installation:
 With each file comes installation instructions.
@@ -33,5 +29,8 @@ Options to use the function:
 _If any Rhino developers read this:
 It would be nice to be able to register python scripts to run on startup. That way we can do away with the whole inport ".rui" files thing...
 And maybe drag and drop support so .py files are same citizens as .rvb scripts..? Pirty pwease..?_
+
+## How to use:
+See the [WIKI](https://github.com/ejnaren/rhinotools/wiki)
 
 
