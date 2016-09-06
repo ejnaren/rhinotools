@@ -1,0 +1,3 @@
+This zone is for things that will blow up your machine if not handled carefully.
+Dont use these scripts if you are not sure what you are doing.
+Consider yourself warned...
