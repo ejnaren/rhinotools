@@ -1,7 +1,5 @@
 #RhinoTools:
 
-![Example of MakeUnique script](https://raw.githubusercontent.com/ejnaren/rhinotools/master/docs/images/ExampleImages%20MakeUnique.jpg)
-
 ## Description:
 These tools are created to enhance the working with Rhino.
 For examples and more info a blog post is coming soon.
