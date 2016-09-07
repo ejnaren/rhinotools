@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RhinoUI major_ver="2" minor_ver="0" guid="f80f810a-d0ee-4a37-851c-e93323f792f5" localize="False" default_language_id="1033">
+  <extend_rhino_menus>
+    <menu guid="d58ceae7-fdb0-4104-80da-274b94ad44a9">
+      <text>
+        <locale_1033>Extend Rhino Menus</locale_1033>
+      </text>
+    </menu>
+  </extend_rhino_menus>
+  <menus />
+  <tool_bar_groups />
+  <tool_bars>
+    <tool_bar guid="687551f6-7000-4765-a16d-5eb199bab468" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="11f3ae97-9a57-4212-ba66-ff2c9a134b23" item_display_style="text_only">
+      <text>
+        <locale_1033>Block Tools</locale_1033>
+      </text>
+      <tool_bar_item guid="a09d16ad-1f4f-430c-9428-aa7fb0c274c7" button_display_mode="text_only" display_style_from_parent="False" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>449c6cb0-2cb8-4cc5-a0d6-388039b8cbd0</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="421d8be1-fba6-4f8d-8a9d-8303a2ab34a8" button_display_mode="text_only" display_style_from_parent="False" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>852a561c-ffb2-4485-9926-47f08273e565</left_macro_id>
+        <right_macro_id>e08e208e-cad9-4701-bd93-143aa15c5ed2</right_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="19c01d1e-954e-4134-b98c-0da0278a5f1a" button_display_mode="text_only" display_style_from_parent="False" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>b18e723a-6bb3-40e9-869d-4e9d41e56403</left_macro_id>
+        <right_macro_id>cbd3d57a-db87-46bd-b0f8-11c04add4711</right_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+  </tool_bars>
+  <macros>
+    <macro_item guid="449c6cb0-2cb8-4cc5-a0d6-388039b8cbd0" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="9478b3dd-8814-44ac-9689-7508002e51bf" bitmap_id="08794a43-c39d-4202-9382-750bc34231c8">
+      <text>
+        <locale_1033>Macro 06</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Reset the scale of a block</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>ResetBlockScale</locale_1033>
+      </button_text>
+      <script>ResetBlockScale</script>
+    </macro_item>
+    <macro_item guid="852a561c-ffb2-4485-9926-47f08273e565" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="1075352d-4730-4326-bbfc-ba8ddcb568b7" bitmap_id="0f1c8e15-921e-4064-869d-8a1bd8852b34">
+      <text>
+        <locale_1033>Macro 07</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Makes selected blocks have their own block definition</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>MakeUnique</locale_1033>
+      </button_text>
+      <script>MakeUnique</script>
+    </macro_item>
+    <macro_item guid="e08e208e-cad9-4701-bd93-143aa15c5ed2" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="d1350f73-fe29-49bb-94d2-3819e620395d" bitmap_id="2554fdd4-8bd6-4017-858a-a7652cfbeec2">
+      <text>
+        <locale_1033>Macro 08</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Try your luck...</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>MakeUnique</locale_1033>
+      </button_text>
+    </macro_item>
+    <macro_item guid="b18e723a-6bb3-40e9-869d-4e9d41e56403" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="89801a40-20b7-4573-badd-700adf9b7408" bitmap_id="80354098-c507-495e-a346-54d07124f644">
+      <text>
+        <locale_1033>Macro 09</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Selects all blocks that are the same as the selected blocks</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>SelSameBlock</locale_1033>
+      </button_text>
+      <script>SelSameBlocks</script>
+    </macro_item>
+    <macro_item guid="cbd3d57a-db87-46bd-b0f8-11c04add4711" ImportedFromFileGuid="5a2ef1c0-336b-4f75-9402-067ee7bf4356" ImportedFromItemGuid="5a1e6bae-76da-4c15-9715-1c8b15d61955" bitmap_id="16d7fe33-5905-4a7c-8028-5622a391eeb7">
+      <text>
+        <locale_1033>Macro 08 - Copy</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Try your luck...</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>SelSameBlock</locale_1033>
+      </button_text>
+    </macro_item>
+  </macros>
+  <bitmaps>
+    <small_bitmap item_width="16" item_height="16">
+      <bitmap_item guid="08794a43-c39d-4202-9382-750bc34231c8" index="0" />
+      <bitmap_item guid="0f1c8e15-921e-4064-869d-8a1bd8852b34" index="1" />
+      <bitmap_item guid="2554fdd4-8bd6-4017-858a-a7652cfbeec2" index="2" />
+      <bitmap_item guid="80354098-c507-495e-a346-54d07124f644" index="3" />
+      <bitmap_item guid="16d7fe33-5905-4a7c-8028-5622a391eeb7" index="4" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAAFAAAAAQCAYAAACBSfjBAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAbSURBVFhH7cEBAQAAAIIg/69uSEAAAAAAwIka
+FBAAAeIt5DwAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </small_bitmap>
+    <normal_bitmap item_width="24" item_height="24">
+      <bitmap_item guid="08794a43-c39d-4202-9382-750bc34231c8" index="0" />
+      <bitmap_item guid="0f1c8e15-921e-4064-869d-8a1bd8852b34" index="1" />
+      <bitmap_item guid="2554fdd4-8bd6-4017-858a-a7652cfbeec2" index="2" />
+      <bitmap_item guid="80354098-c507-495e-a346-54d07124f644" index="3" />
+      <bitmap_item guid="16d7fe33-5905-4a7c-8028-5622a391eeb7" index="4" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAAHgAAAAYCAYAAAAxkDmIAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAiSURBVGhD7cEBDQAAAMKg909tDjcgAAAAAAAA
+AAAAAIBrNS0YAAFqIobtAAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </normal_bitmap>
+    <large_bitmap item_width="32" item_height="32">
+      <bitmap_item guid="08794a43-c39d-4202-9382-750bc34231c8" index="0" />
+      <bitmap_item guid="0f1c8e15-921e-4064-869d-8a1bd8852b34" index="1" />
+      <bitmap_item guid="2554fdd4-8bd6-4017-858a-a7652cfbeec2" index="2" />
+      <bitmap_item guid="80354098-c507-495e-a346-54d07124f644" index="3" />
+      <bitmap_item guid="16d7fe33-5905-4a7c-8028-5622a391eeb7" index="4" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAAKAAAAAgCAYAAACVf3P1AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVHhe7cExAQAAAMKg9U9tDB8gAAAAAAAA
+AAAAAAAAAAAAAAAAAOCsBlAgAAFU/kY/AAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </large_bitmap>
+  </bitmaps>
+  <scripts />
+</RhinoUI>
