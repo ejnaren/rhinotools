@@ -1,11 +1,15 @@
 #RhinoTools:
 
+![Example of MakeUnique script](https://raw.githubusercontent.com/ejnaren/rhinotools/master/docs/images/ExampleImages%20MakeUnique.jpg)
+
 ## Description:
 These tools are created to enhance the working with Rhino.
 For examples and more info a blog post is coming soon.
+Current Version: 1.1
 
 
 ## Current Tools:
+###BlockTools:
 #### ResetBlockScale:
 Resets the scale of a block, keeping the rotation around the insertion point.
 Inspired by the ResetBlock script by Dale Fugier. Thank you.
@@ -16,21 +20,15 @@ Selects all the blocks with the same definition as the selected blocks.
 
 
 ## Installation:
-With each file comes installation instructions.
-As a general rule of thumb:
-* All python files are installed by copying to the Rhino script folder. ie.: C:\Users\"USER"\AppData\Roaming\McNeel\Rhinoceros\5.0\scripts
-
-Options to use the function:
-* Recommended: Import the bundled "Block Tools.rui" toolbar with readymade buttons to call the functions (found in the ui folder).
-* Add a new button with the following macro: ( _NoEcho !-_RunPythonScript "MakeUnique.py" _Echo )
-* Add an alias with the above command
-* Call the script directly by using this command: "-RunPythonScript MakeUnique.py"
-
-_If any Rhino developers read this:
-It would be nice to be able to register python scripts to run on startup. That way we can do away with the whole inport ".rui" files thing...
-And maybe drag and drop support so .py files are same citizens as .rvb scripts..? Pirty pwease..?_
+    1. Download the .rhi file found in the installer folder.
+    2. Doubleclick it or drag drop into rhino window.
+    3. Optionally drag drop the matching .rui file from the UI folder into window to get a toolbar.
+    4. Enjoy.
 
 ## How to use:
+    Run with the following commands as normal or use the buttons from the toolbar files (.rui)
+
+## Further info:
 See the [WIKI](https://github.com/ejnaren/rhinotools/wiki)
 
 
