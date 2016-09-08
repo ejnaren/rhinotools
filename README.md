@@ -27,13 +27,13 @@ Selects all the blocks with the same definition as the selected blocks.
     Run with the following commands as normal or use the buttons from the toolbar files (.rui)
     
 ## Known issues:
-    1. If a block is scale negatively (like -1) and you use the make unique it will flip it back to normal scale (1).
-    I will work on fixing this as soon as time permits.
+1. If a block is scale negatively (like -1) and you use the make unique it will flip it back to normal scale (1).
+I will work on fixing this as soon as time permits.
     
 ## Uninstall:
-    To uninstall the plugin remove the BlockTools folder from the plugin folder.
-    Ie. on windows found here:
-    "C:\Users\[USERNAME]\AppData\Roaming\McNeel\Rhinoceros\5.0\Plug-ins"
+To uninstall the plugin remove the BlockTools folder from the plugin folder.
+Ie. on windows found here:
+"C:\Users\[USERNAME]\AppData\Roaming\McNeel\Rhinoceros\5.0\Plug-ins"
 
 ## Further info:
 See the [WIKI](https://github.com/ejnaren/rhinotools/wiki)
