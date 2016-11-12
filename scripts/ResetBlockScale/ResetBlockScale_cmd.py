@@ -2,7 +2,7 @@
 @name:          ResetBlockScale
 @description:   Resets the scale of a block, keeping the rotation around the insertion point.
 @author:        Ejnar Brendsdal
-@version:       1.1
+@version:       1.2
 @attribution:   Inspired by the ResetBlock script by Dale Fugier. Thank you.
 @link:          https://github.com/ejnaren/rhinotools
 @notes:         Works with Rhino 5.
@@ -29,6 +29,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @Changelog:
     1.1: Make script into a command to be included in the BlockTools part of RhinoTools.
+    1.2: Fix a bug when resetting a negatively scaled bug. Biproduct: it does not insert a new block. It scales the existing one. So all properties are kept. It also simplifies the heck out of it :)
+
 """
 
 #******* Imports ********************
@@ -78,39 +80,29 @@ def RunCommand( is_interactive ):
 
         #Add reference geometry
         pts = G.Polyline(points)
-
+        
         #Apply block transformation matrix to ref geometry
         pts.Transform(blockXForm)
-
-        #Create initial plane and final plane
-        initOrigin = G.Point3d(0,0,0)
-        initXaxis = G.Vector3d(1,0,0)
-        initYaxis = G.Vector3d(0,1,0)
-        initPlane = G.Plane(initOrigin, initXaxis, initYaxis)
-
-        finalOrigin = pts[0]
+        
+        #create final plane
+        finalOrigin = pts[1]
         finalXaxis = rs.VectorSubtract( pts[1], pts[0] )
         finalYaxis = rs.VectorSubtract( pts[2], pts[0] )
         finalPlane = G.Plane(finalOrigin, finalXaxis, finalYaxis)
 
-        #Insert new block in 0,0,0
-        newBlock = rs.InsertBlock(blockName,[0,0,0])
-
-        #change basis to the new vectors
-        basisXForm = rs.XformChangeBasis(finalPlane, initPlane)
-
-        #transform new block
-        rs.TransformObject(newBlock, basisXForm)
-
-        finalObjs.append(newBlock)
-
-    #Delete original block
-    rs.DeleteObjects(objectIds)
+        #create scaling factors
+        xFac = 1 / rs.Distance(pts[1],pts[0])
+        yFac = 1 / rs.Distance(pts[2],pts[0])
+        zFac = 1 / rs.Distance(pts[3],pts[0])
+        
+        #Scale block
+        newXForm = G.Transform.Scale(finalPlane, xFac, yFac, zFac)
+        rs.TransformObject(id,newXForm)
 
     rs.EnableRedraw(True)
 
     #Select all new objects
-    rs.SelectObjects(finalObjs)
+    rs.SelectObjects(objectIds)
 
     print "...aaand its done."
     #End RunCommand()
