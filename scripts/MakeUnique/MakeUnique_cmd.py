@@ -2,7 +2,7 @@
 @name:          MakeUnique
 @description:   Takes one or many blocks and creates a unique copy with own block definitions.
 @author:        Ejnar Brendsdal
-@version:       1.1
+@version:       1.2
 @link:          https://github.com/ejnaren/rhinotools
 @notes:         Works with Rhino 5.
 
@@ -28,6 +28,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @Changelog:
     1.1: Make script into a command to be included in the BlockTools part of RhinoTools.
+    1.2: Fix scaling bug and retain properties from the original block. lso simplifies the script a lot making it faster by removing a lot of redundant code. Must have been drunk when I wrote the first version...
 """
 
 #******* Imports ********************
@@ -36,6 +37,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 import rhinoscriptsyntax as rs
 import scriptcontext as sc
 import Rhino.Geometry as G
+import re
 
 #******* Main function ********************
 #******************************************
@@ -67,15 +69,8 @@ def RunCommand( is_interactive ):
     #pause viewport redraw
     rs.EnableRedraw(False)
 
-    #******* Ref Geometry ***************
+    #***** Define new block and add *****
     #************************************
-
-    points = [
-     G.Point3d(0,0,0),
-     G.Point3d(1,0,0),
-     G.Point3d(0,1,0),
-     G.Point3d(0,0,1)
-    ]
 
     #Get block names
     blockNames = rs.BlockNames()
@@ -89,23 +84,6 @@ def RunCommand( is_interactive ):
             blockXForm = rs.BlockInstanceXform(id)
             blockName = rs.BlockInstanceName(id)
 
-            #Add reference geometry
-            pts = G.Polyline(points)
-
-            #Apply block transformation matrix to ref geometry
-            pts.Transform(blockXForm)
-
-            #Create initial plane and final plane
-            initOrigin = G.Point3d(0,0,0)
-            initXaxis = G.Vector3d(1,0,0)
-            initYaxis = G.Vector3d(0,1,0)
-            initPlane = G.Plane(initOrigin, initXaxis, initYaxis)
-
-            finalOrigin = pts[0]
-            finalXaxis = rs.VectorSubtract( pts[1], pts[0] )
-            finalYaxis = rs.VectorSubtract( pts[2], pts[0] )
-            finalPlane = G.Plane(finalOrigin, finalXaxis, finalYaxis)
-
             #Insert new block in 0,0,0
             newBlock = rs.InsertBlock(blockName,[0,0,0])
 
@@ -113,28 +91,30 @@ def RunCommand( is_interactive ):
             exObjs = rs.ExplodeBlockInstance(newBlock)
 
             #create new block name
-            import re
-            ##m = re.search(r'#[0-9]+$', blockName)
-            # if the string ends in digits m will be a Match object, or None otherwise.
-            ##if m is not None:
+            
+            # if the string ends in digits m will be a Match object, or None otherwise.            
             strippedName = re.sub(r'#[0-9]+$', '', blockName)
             #return False
-
-            for x in range(1,10000):
-                iter = x
+            
+            #test if block name exist and add to the end number if true.
+            x = 0
+            tryAgain = True
+            while tryAgain:
+                x += 1
                 newerBlockName = strippedName+"#"+str(x)
                 if newerBlockName not in blockNames:
+                    tryAgain = False
                     break
 
             #insert exObjs as new block
             rs.AddBlock(exObjs, [0,0,0], newerBlockName, delete_input = True)
             newerBlock = rs.InsertBlock(newerBlockName, [0,0,0])
-
-            #change basis to the new vectors
-            basisXForm = rs.XformChangeBasis(finalPlane, initPlane)
-
+            
+            #match properties from original
+            rs.MatchObjectAttributes(newerBlock, id)
+            
             #transform new block
-            rs.TransformObject(newerBlock, basisXForm)
+            rs.TransformObject(newerBlock, blockXForm)
 
             finalObjs.append(newerBlock)
 
