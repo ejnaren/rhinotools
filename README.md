@@ -1,4 +1,4 @@
-![Logo of RhinoTools](https://github.com/ejnaren/rhinotools/raw/master/docs/images/RhinoTools%20Logo.png)
+<img src="https://github.com/ejnaren/rhinotools/raw/master/docs/images/RhinoTools%20Logo.png" width="200" alt="Logo of RhinoTools"/>
 #RhinoTools:
 
 ## Description:
