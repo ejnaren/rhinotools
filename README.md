@@ -1,8 +1,8 @@
+![Logo of RhinoTools](https://github.com/ejnaren/rhinotools/docs/images/RhinoTools Logo.png)
 #RhinoTools:
 
 ## Description:
 Toolbox of hard to miss features of Rhino.  
-For examples and more info a blog post is coming soon.  
 Current Version 1.2
 
 
