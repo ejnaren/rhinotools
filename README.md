@@ -18,6 +18,8 @@ Selects all the blocks with the same definition as the selected blocks.
 
 
 ## Installation:
+Get the installer <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools.rhi" alt="link to installer">here</a>.
+
     1. Download the .rhi file found in the installer folder.
     2. Doubleclick it or drag drop into rhino window.
     3. Optionally drag drop the matching .rui file from the UI folder into window to get a toolbar.
