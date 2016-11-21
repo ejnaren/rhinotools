@@ -56,18 +56,18 @@ def RunCommand( is_interactive ):
         print "No objects"
         return False
 
+    #pause viewport redraw
+    rs.EnableRedraw(False)
+
     #******* Sort blocks by type ********
     #************************************
     blockTypes = {}
     for id in objectIds:
-        ##blockXForm = rs.BlockInstanceXform(id)
         blockName = rs.BlockInstanceName(id)
         if blockName not in blockTypes:
             blockTypes[blockName] = []
         blockTypes[blockName].append(id)
 
-    #pause viewport redraw
-    rs.EnableRedraw(False)
 
     #***** Define new block and add *****
     #************************************
@@ -78,7 +78,7 @@ def RunCommand( is_interactive ):
     #gather all new objects when done
     finalObjs = []
 
-    for blockType in blockTypes:
+    for blockType in blockTypes:        
         for id in blockTypes[blockType]:
             #Get the block transformation matrix and name
             blockXForm = rs.BlockInstanceXform(id)
@@ -94,7 +94,6 @@ def RunCommand( is_interactive ):
             
             # if the string ends in digits m will be a Match object, or None otherwise.            
             strippedName = re.sub(r'#[0-9]+$', '', blockName)
-            #return False
             
             #test if block name exist and add to the end number if true.
             x = 0
@@ -102,7 +101,7 @@ def RunCommand( is_interactive ):
             while tryAgain:
                 x += 1
                 newerBlockName = strippedName+"#"+str(x)
-                if newerBlockName not in blockNames:
+                if newerBlockName not in blockNames:                    
                     tryAgain = False
                     break
 
@@ -116,7 +115,11 @@ def RunCommand( is_interactive ):
             #transform new block
             rs.TransformObject(newerBlock, blockXForm)
 
+            #append for final selection
             finalObjs.append(newerBlock)
+
+        #add name to list of used blocknames.
+        blockNames.append(newerBlockName)
 
 
     #Delete original block
