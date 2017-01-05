@@ -3,8 +3,7 @@
 
 ## Description:
 Toolbox of hard to miss features of Rhino.  
-Current Version 1.2
-
+Current Version 1.3
 
 ## Current Tools:
 ###BlockTools:
