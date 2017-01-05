@@ -2,7 +2,7 @@
 @name:          MakeUnique
 @description:   Takes one or many blocks and creates a unique copy with own block definitions.
 @author:        Ejnar Brendsdal
-@version:       1.2
+@version:       1.3
 @link:          https://github.com/ejnaren/rhinotools
 @notes:         Works with Rhino 5.
 
@@ -29,6 +29,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @Changelog:
     1.1: Make script into a command to be included in the BlockTools part of RhinoTools.
     1.2: Fix scaling bug and retain properties from the original block. lso simplifies the script a lot making it faster by removing a lot of redundant code. Must have been drunk when I wrote the first version...
+    1.3: Unify version numbers and small redraw optimization.
 """
 
 #******* Imports ********************
@@ -78,7 +79,7 @@ def RunCommand( is_interactive ):
     #gather all new objects when done
     finalObjs = []
 
-    for blockType in blockTypes:        
+    for blockType in blockTypes:
         for id in blockTypes[blockType]:
             #Get the block transformation matrix and name
             blockXForm = rs.BlockInstanceXform(id)
@@ -91,27 +92,27 @@ def RunCommand( is_interactive ):
             exObjs = rs.ExplodeBlockInstance(newBlock)
 
             #create new block name
-            
-            # if the string ends in digits m will be a Match object, or None otherwise.            
+
+            # if the string ends in digits m will be a Match object, or None otherwise.
             strippedName = re.sub(r'#[0-9]+$', '', blockName)
-            
+
             #test if block name exist and add to the end number if true.
             x = 0
             tryAgain = True
             while tryAgain:
                 x += 1
                 newerBlockName = strippedName+"#"+str(x)
-                if newerBlockName not in blockNames:                    
+                if newerBlockName not in blockNames:
                     tryAgain = False
                     break
 
             #insert exObjs as new block
             rs.AddBlock(exObjs, [0,0,0], newerBlockName, delete_input = True)
             newerBlock = rs.InsertBlock(newerBlockName, [0,0,0])
-            
+
             #match properties from original
             rs.MatchObjectAttributes(newerBlock, id)
-            
+
             #transform new block
             rs.TransformObject(newerBlock, blockXForm)
 
@@ -125,10 +126,10 @@ def RunCommand( is_interactive ):
     #Delete original block
     rs.DeleteObjects(objectIds)
 
-    rs.EnableRedraw(True)
-
     #Select all new objects
     rs.SelectObjects(finalObjs)
+
+    rs.EnableRedraw(True)
 
     print "...aaand its done."
     #End RunCommand()

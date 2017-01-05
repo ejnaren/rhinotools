@@ -2,7 +2,7 @@
 @name:          ResetBlockScale
 @description:   Resets the scale of a block, keeping the rotation around the insertion point.
 @author:        Ejnar Brendsdal
-@version:       1.2
+@version:       1.3
 @attribution:   Inspired by the ResetBlock script by Dale Fugier. Thank you.
 @link:          https://github.com/ejnaren/rhinotools
 @notes:         Works with Rhino 5.
@@ -30,7 +30,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @Changelog:
     1.1: Make script into a command to be included in the BlockTools part of RhinoTools.
     1.2: Fix a bug when resetting a negatively scaled bug. Biproduct: it does not insert a new block. It scales the existing one. So all properties are kept. It also simplifies the heck out of it :)
-
+    1.3: Unify version numbers and small redraw optimization.
 """
 
 #******* Imports ********************
@@ -80,10 +80,10 @@ def RunCommand( is_interactive ):
 
         #Add reference geometry
         pts = G.Polyline(points)
-        
+
         #Apply block transformation matrix to ref geometry
         pts.Transform(blockXForm)
-        
+
         #create final plane
         finalOrigin = pts[1]
         finalXaxis = rs.VectorSubtract( pts[1], pts[0] )
@@ -94,15 +94,15 @@ def RunCommand( is_interactive ):
         xFac = 1 / rs.Distance(pts[1],pts[0])
         yFac = 1 / rs.Distance(pts[2],pts[0])
         zFac = 1 / rs.Distance(pts[3],pts[0])
-        
+
         #Scale block
         newXForm = G.Transform.Scale(finalPlane, xFac, yFac, zFac)
         rs.TransformObject(id,newXForm)
 
-    rs.EnableRedraw(True)
-
     #Select all new objects
     rs.SelectObjects(objectIds)
+
+    rs.EnableRedraw(True)
 
     print "...aaand its done."
     #End RunCommand()

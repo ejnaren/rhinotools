@@ -2,7 +2,7 @@
 @name:          SelSameBlocks
 @description:   Selects alle the blocks with the same definition as the selected blocks.
 @author:        Ejnar Brendsdal
-@version:       1.1
+@version:       1.3
 @link:          https://github.com/ejnaren/rhinotools
 @notes:         Works with Rhino 5.
 
@@ -30,6 +30,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @Changelog:
     1.1:    Make script into a command to be included in the BlockTools part of RhinoTools
             Name change to "SelSameBlocks" to conform to Rhino standard
+    1.3: Unify version numbers and small redraw optimization.
 """
 
 #******* Imports ********************
