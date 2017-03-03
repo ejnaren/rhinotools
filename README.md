@@ -10,10 +10,13 @@ Current Version 1.3
 #### ResetBlockScale:
 Resets the scale of a block, keeping the rotation around the insertion point.
 Inspired by the ResetBlock script by Dale Fugier. Thank you.
+![Example of ResetBlockScale script](https://raw.githubusercontent.com/ejnaren/rhinotools/master/docs/images/ExampleImages%20ResetBlockScale.jpg)
 #### MakeUnique:
 Takes one or many blocks and creates a unique copy with own block definitions.
+![Example of MakeUnique script](https://raw.githubusercontent.com/ejnaren/rhinotools/master/docs/images/ExampleImages%20MakeUnique.jpg)
 #### SelectSameBlocks:
 Selects all the blocks with the same definition as the selected blocks.
+![Example of SelectSameBlocks script](https://raw.githubusercontent.com/ejnaren/rhinotools/master/docs/images/ExampleImages%20SelectSameBlocks.jpg)
 
 
 ## Installation:
