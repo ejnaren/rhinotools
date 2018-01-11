@@ -1,12 +1,12 @@
 <img src="https://github.com/ejnaren/rhinotools/raw/master/docs/images/RhinoTools%20Logo.png" width="200" alt="Logo of RhinoTools"/>
-#RhinoTools:
+# RhinoTools:
 
 ## Description:
 Toolbox of hard to miss features of Rhino.  
 Current Version 1.4
 
 ## Current Tools:
-###BlockTools:
+### BlockTools:
 #### ResetBlockScale:
 Resets the scale of a block, keeping the rotation around the insertion point.
 Inspired by the ResetBlock script by Dale Fugier. Thank you.
