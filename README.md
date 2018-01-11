@@ -7,12 +7,16 @@ Toolbox of hard to miss features of Rhino.
 Current Version 1.4
 
 ## Installation:
-Get the installer <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.rhi" alt="link to installer">here</a>.
+Get the installer:
+Windows: <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.rhi" alt="link to installer">here</a>.
+Mac: <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.macrhi" alt="link to installer">here</a>.
 
-    1. Download the .rhi file found in the installer folder.
+    1. Download the .rhi (windows) or .macrhi (mac) file found in the installer folder.
     2. Doubleclick it or drag drop into rhino window.
     3. Optionally drag drop the matching .rui file from the UI folder into window to get a toolbar.
     4. Enjoy.
+    
+    Note: The .macrhi have not been tested yet. Any problem please open an issue.
 
 ## How to use:
     Run with the following commands as normal or use the buttons from the toolbar files (.rui)
