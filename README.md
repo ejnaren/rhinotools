@@ -23,7 +23,7 @@ Selects all the blocks with the same definition as the selected blocks.
 
 
 ## Installation:
-Get the installer <a href="https://github.com/ejnaren/rhinotools/raw/master/installer/BlockTools%201.3.rhi" alt="link to installer">here</a>.
+Get the installer <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.rhi" alt="link to installer">here</a>.
 
     1. Download the .rhi file found in the installer folder.
     2. Doubleclick it or drag drop into rhino window.
