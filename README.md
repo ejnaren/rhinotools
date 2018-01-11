@@ -6,6 +6,17 @@
 Toolbox of hard to miss features of Rhino.  
 Current Version 1.4
 
+## Installation:
+Get the installer <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.rhi" alt="link to installer">here</a>.
+
+    1. Download the .rhi file found in the installer folder.
+    2. Doubleclick it or drag drop into rhino window.
+    3. Optionally drag drop the matching .rui file from the UI folder into window to get a toolbar.
+    4. Enjoy.
+
+## How to use:
+    Run with the following commands as normal or use the buttons from the toolbar files (.rui)
+
 ## Current Tools:
 
 ### BlockTools:
@@ -21,17 +32,6 @@ Takes one or many blocks and creates a unique copy with own block definitions.
 Selects all the blocks with the same definition as the selected blocks.
 ![Example of SelectSameBlocks script](https://raw.githubusercontent.com/ejnaren/rhinotools/master/docs/images/ExampleImages%20SelectSameBlocks.jpg)
 
-
-## Installation:
-Get the installer <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.rhi" alt="link to installer">here</a>.
-
-    1. Download the .rhi file found in the installer folder.
-    2. Doubleclick it or drag drop into rhino window.
-    3. Optionally drag drop the matching .rui file from the UI folder into window to get a toolbar.
-    4. Enjoy.
-
-## How to use:
-    Run with the following commands as normal or use the buttons from the toolbar files (.rui)
         
 ## Uninstall:
 To uninstall the plugin remove the BlockTools folder from the plugin folder.
