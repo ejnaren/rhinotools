@@ -9,9 +9,9 @@ Current Version 1.4
 ## Installation:
 Get the installer:
 Windows: <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.rhi" alt="link to installer">here</a>.
-Mac: <a href="https://github.com/ejnaren/rhinotools/blob/master/installer/BlockTools%201.4.macrhi" alt="link to installer">here</a>.
+Mac: "COMING"
 
-    1. Download the .rhi (windows) or .macrhi (mac) file found in the installer folder.
+    1. Download the .rhi 
     2. Doubleclick it or drag drop into rhino window.
     3. Optionally drag drop the matching .rui file from the UI folder into window to get a toolbar.
     4. Enjoy.
